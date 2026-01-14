@@ -39,32 +39,22 @@ const HeroCarousel = () => {
       {/* Content Box */}
       <div className="absolute inset-0 flex items-center z-10">
         <div className="w-full max-w-7xl mx-auto px-4">
-          <div className="w-full max-w-md bg-white p-8 shadow-2xl">
-            <h1 className="text-2xl md:text-3xl font-bold text-[#0F3E54] mb-3 leading-tight">
+          <div className="max-w-sm bg-white p-6 shadow-xl">
+            <h1 className="text-xl font-bold text-[#0F3E54] mb-2 leading-tight">
               We don&apos;t make a living selling policies...
             </h1>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#0F3E54] mb-4 leading-tight">
+            <h2 className="text-xl font-bold text-[#0F3E54] mb-3 leading-tight">
               We earn a living protecting our clients.
             </h2>
-            <p className="text-sm md:text-base text-[#718096] mb-6">
+            <p className="text-sm text-[#718096] mb-4">
               Connect with us today and discover a better way to buy insurance. In about 8 minutes.
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-[#0F3E54] text-white px-6 py-3 font-semibold uppercase tracking-wider hover:bg-[#00224F] transition-colors text-sm"
+              className="inline-block bg-[#0F3E54] text-white px-5 py-2.5 font-semibold uppercase tracking-wider hover:bg-[#00224F] transition-colors text-xs"
             >
               Connect
             </Link>
-
-            <div className="mt-6 opacity-20">
-              <Image
-                src="/images/pattern-6.png"
-                alt=""
-                width={150}
-                height={45}
-                className="object-contain"
-              />
-            </div>
           </div>
         </div>
       </div>
