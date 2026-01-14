@@ -6,20 +6,16 @@ import Link from 'next/link';
 
 const heroSlides = [
   {
-    image: '/images/insure8-p6pjm2gbf5lto7d29d9es608oj13xkf37733qzp78w.jpg',
-    alt: 'Insurance consultation',
+    image: '/images/shutterstock_1061540957-scaled.jpg',
+    alt: 'Family',
   },
   {
-    image: '/images/pexels-rodnae-productions-7821684.jpg',
-    alt: 'Family protection',
-  },
-  {
-    image: '/images/pexels-mikhail-nilov-7734591.jpg',
+    image: '/images/business-meeting-and-teamwork-by-business-people-REGXPAZ.jpg',
     alt: 'Business meeting',
   },
   {
-    image: '/images/38.jpg',
-    alt: 'Motorcycle',
+    image: '/images/shutterstock_388719088-scaled.jpg',
+    alt: 'Auto',
   },
 ];
 
