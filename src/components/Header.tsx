@@ -6,8 +6,6 @@ import { useState } from 'react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isPersonalOpen, setIsPersonalOpen] = useState(false);
-  const [isCommercialOpen, setIsCommercialOpen] = useState(false);
 
   const personalInsuranceItems = [
     { name: 'Auto Insurance', href: '/personal-insurance#auto' },
@@ -16,22 +14,13 @@ const Header = () => {
     { name: 'Motorcycle Insurance', href: '/personal-insurance#motorcycle' },
     { name: 'Boat Insurance', href: '/personal-insurance#boat' },
     { name: 'Renters Insurance', href: '/personal-insurance#renters' },
-    { name: 'Classic Car Insurance', href: '/personal-insurance#classic-car' },
-    { name: 'Pet Insurance', href: '/personal-insurance#pet' },
-    { name: 'Long Term Care', href: '/personal-insurance#long-term-care' },
-    { name: 'Disability Insurance', href: '/personal-insurance#disability' },
-    { name: 'Health/Medigap', href: '/personal-insurance#health' },
-    { name: 'Special Event Insurance', href: '/personal-insurance#special-event' },
   ];
 
   const commercialInsuranceItems = [
     { name: 'Business Owners Package', href: '/commercial-insurance#business-owners' },
     { name: 'Commercial Auto', href: '/commercial-insurance#commercial-auto' },
     { name: 'General Liability', href: '/commercial-insurance#general-liability' },
-    { name: 'Surety Bonds', href: '/commercial-insurance#surety-bonds' },
     { name: 'Workers Compensation', href: '/commercial-insurance#workers-comp' },
-    { name: 'Professional Liability', href: '/commercial-insurance#professional-liability' },
-    { name: 'Workplace Benefits', href: '/commercial-insurance#workplace-benefits' },
   ];
 
   return (
@@ -61,7 +50,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Main Navigation */}
+      {/* Main Header - Logo and Navigation */}
       <nav className="bg-white shadow-sm">
         <div className="container-max py-4 px-4">
           <div className="flex justify-between items-center">
@@ -85,63 +74,18 @@ const Header = () => {
               <Link href="/about-us" className="text-[#0F3E54] hover:text-[#003478] font-medium transition-colors">
                 About Us
               </Link>
-
-              {/* Personal Insurance Dropdown */}
-              <div className="relative group">
-                <button
-                  className="text-[#0F3E54] hover:text-[#003478] font-medium transition-colors flex items-center gap-1"
-                  onMouseEnter={() => setIsPersonalOpen(true)}
-                  onMouseLeave={() => setIsPersonalOpen(false)}
-                >
-                  Personal Insurance
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                <div
-                  className={`absolute top-full left-0 bg-white shadow-lg rounded-md py-2 min-w-[220px] transition-all duration-200 ${isPersonalOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
-                  onMouseEnter={() => setIsPersonalOpen(true)}
-                  onMouseLeave={() => setIsPersonalOpen(false)}
-                >
-                  <Link href="/personal-insurance" className="block px-4 py-2 text-[#0F3E54] hover:bg-[#0F3E54] hover:text-white transition-colors font-medium">
-                    View All
-                  </Link>
-                  {personalInsuranceItems.map((item) => (
-                    <Link key={item.name} href={item.href} className="block px-4 py-2 text-[#0F3E54] hover:bg-[#0F3E54] hover:text-white transition-colors">
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Commercial Insurance Dropdown */}
-              <div className="relative group">
-                <button
-                  className="text-[#0F3E54] hover:text-[#003478] font-medium transition-colors flex items-center gap-1"
-                  onMouseEnter={() => setIsCommercialOpen(true)}
-                  onMouseLeave={() => setIsCommercialOpen(false)}
-                >
-                  Commercial Insurance
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                <div
-                  className={`absolute top-full left-0 bg-white shadow-lg rounded-md py-2 min-w-[220px] transition-all duration-200 ${isCommercialOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
-                  onMouseEnter={() => setIsCommercialOpen(true)}
-                  onMouseLeave={() => setIsCommercialOpen(false)}
-                >
-                  <Link href="/commercial-insurance" className="block px-4 py-2 text-[#0F3E54] hover:bg-[#0F3E54] hover:text-white transition-colors font-medium">
-                    View All
-                  </Link>
-                  {commercialInsuranceItems.map((item) => (
-                    <Link key={item.name} href={item.href} className="block px-4 py-2 text-[#0F3E54] hover:bg-[#0F3E54] hover:text-white transition-colors">
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
+              <Link href="/personal-insurance" className="text-[#0F3E54] hover:text-[#003478] font-medium transition-colors flex items-center gap-1">
+                Personal Insurance
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+              <Link href="/commercial-insurance" className="text-[#0F3E54] hover:text-[#003478] font-medium transition-colors flex items-center gap-1">
+                Commercial Insurance
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
               <Link href="/faq" className="text-[#0F3E54] hover:text-[#003478] font-medium transition-colors">
                 FAQ
               </Link>

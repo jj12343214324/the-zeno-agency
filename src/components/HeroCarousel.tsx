@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const heroSlides = [
   {
-    image: '/images/httpselements.envato.combusiness-meeting-and-teamwork-by-business-people-G4JTHB5-1.jpg',
+    image: '/images/shutterstock_1865153404-scaled.jpg',
     alt: 'Business meeting',
   },
   {
@@ -22,7 +22,7 @@ const heroSlides = [
     alt: 'Family meeting with advisor',
   },
   {
-    image: '/images/httpselements.envato.comconcept-of-housing-for-family-QNX596A.jpg',
+    image: '/images/shutterstock_2149499793-scaled.jpg',
     alt: 'Housing for family',
   },
 ];

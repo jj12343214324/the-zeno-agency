@@ -5,12 +5,12 @@ import HeroCarousel from '@/components/HeroCarousel';
 const personalInsuranceTypes = [
   {
     title: 'Auto Insurance',
-    image: '/images/car-insurance-2.png',
+    image: '/images/shutterstock_388719088-scaled.jpg',
     href: '/personal-insurance#auto',
   },
   {
     title: 'Homeowners Insurance',
-    image: '/images/home-2.png',
+    image: '/images/shutterstock_2149499793-scaled.jpg',
     href: '/personal-insurance#homeowners',
   },
   {
