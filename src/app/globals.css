@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
 :root {
+  /* Original site colors */
+  --primary: #0F3E54;
+  --secondary: #00224F;
+  --accent: #003478;
+  --text: #888888;
+  --white: #FFFFFF;
+  --light-bg: #F5F7FA;
+  --border: #D3DCE8;
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -8,19 +16,38 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-inter);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn-primary {
+  @apply bg-[#0F3E54] text-white px-6 py-3 font-semibold hover:bg-[#00224F] transition-colors duration-300;
+}
+
+.btn-secondary {
+  @apply border-2 border-[#0F3E54] text-[#0F3E54] px-6 py-3 font-semibold hover:bg-[#0F3E54] hover:text-white transition-colors duration-300;
+}
+
+.btn-accent {
+  @apply bg-[#003478] text-white px-6 py-3 font-semibold hover:bg-[#00224F] transition-colors duration-300;
+}
+
+.section-padding {
+  @apply py-16 md:py-24 px-4 md:px-8;
+}
+
+.container-max {
+  @apply max-w-7xl mx-auto;
 }
