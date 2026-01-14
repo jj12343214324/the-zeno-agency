@@ -5,12 +5,12 @@ import HeroCarousel from '@/components/HeroCarousel';
 const personalInsuranceTypes = [
   {
     title: 'Auto Insurance',
-    image: '/images/shutterstock_388719088-scaled.jpg',
+    image: '/images/pexels-rodnae-productions-7821684.jpg',
     href: '/personal-insurance#auto',
   },
   {
     title: 'Homeowners Insurance',
-    image: '/images/shutterstock_2149499793-scaled.jpg',
+    image: '/images/pexels-mikhail-nilov-7734591.jpg',
     href: '/personal-insurance#homeowners',
   },
   {
@@ -48,7 +48,7 @@ const personalInsuranceTypes = [
 const commercialInsuranceTypes = [
   {
     title: 'Business Owners Package',
-    image: '/images/Comm-img1.jpg.webp',
+    image: '/images/insurance-policy-2021-10-16-21-45-01-utc-1.jpg',
     href: '/commercial-insurance#business-owners',
   },
   {
@@ -68,20 +68,20 @@ const commercialInsuranceTypes = [
   },
   {
     title: 'Workers Compensation',
-    image: '/images/Employee-meeting-hiring-contract_fizkes.png',
+    image: '/images/mcap-blog-apr2021_6e79844.jpg',
     href: '/commercial-insurance#workers-comp',
   },
   {
     title: 'Professional Liability',
-    image: '/images/httpselements.envato.combusiness-PE8V22B-1.jpg',
+    image: '/images/pexels-andrea-piacquadio-3760067.jpg',
     href: '/commercial-insurance#professional-liability',
   },
 ];
 
 const insurancePartners = [
-  { name: 'Progressive', logo: '/images/clients-logo-1.png' },
-  { name: 'Travelers', logo: '/images/clients-logo-2.png' },
-  { name: 'The Hartford', logo: '/images/clients-logo-3.png' },
+  { name: 'Progressive', logo: '/images/progressive.png' },
+  { name: 'Travelers', logo: '/images/travelers.png' },
+  { name: 'The Hartford', logo: '/images/TH.png' },
   { name: 'Liberty Mutual', logo: '/images/liberty.png' },
   { name: 'Hagerty', logo: '/images/hagerty.png' },
   { name: 'CNA', logo: '/images/cna.png' },
@@ -93,7 +93,11 @@ const insurancePartners = [
   { name: 'Pacific Life', logo: '/images/pacific.png' },
   { name: 'Bamboo', logo: '/images/bamboo.png' },
   { name: 'Northlight', logo: '/images/northlight.png' },
-  { name: 'New York Life', logo: '/images/newyork.png' },
+  { name: 'Protective', logo: '/images/protective.png' },
+  { name: 'Prudential', logo: '/images/prudential.png' },
+  { name: 'RLI', logo: '/images/rli.jpg' },
+  { name: 'Tapco', logo: '/images/tapco.png' },
+  { name: 'Voya', logo: '/images/voya.png' },
 ];
 
 export default function Home() {

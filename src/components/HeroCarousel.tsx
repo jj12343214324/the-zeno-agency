@@ -6,24 +6,20 @@ import Link from 'next/link';
 
 const heroSlides = [
   {
-    image: '/images/shutterstock_1865153404-scaled.jpg',
-    alt: 'Business meeting',
+    image: '/images/38.jpg',
+    alt: 'Motorcycle',
   },
   {
-    image: '/images/httpselements.envato.comhappy-family-at-home-LLVD2LX.jpg',
-    alt: 'Happy family at home',
+    image: '/images/insure8-p6pjm2gbf5lto7d29d9es608oj13xkf37733qzp78w.jpg',
+    alt: 'Insurance consultation',
   },
   {
-    image: '/images/httpselements.envato.comfamily-insurance-arab-parents-making-roof-symbol-o-DQN8GTZ-2.jpg',
+    image: '/images/pexels-rodnae-productions-7821684.jpg',
     alt: 'Family protection',
   },
   {
-    image: '/images/httpselements.envato.comcouple-with-kid-having-meeting-with-adviser-KWH3DA9.jpg',
-    alt: 'Family meeting with advisor',
-  },
-  {
-    image: '/images/shutterstock_2149499793-scaled.jpg',
-    alt: 'Housing for family',
+    image: '/images/pexels-mikhail-nilov-7734591.jpg',
+    alt: 'Business meeting',
   },
 ];
 
