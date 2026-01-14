@@ -34,56 +34,84 @@ const HeroCarousel = () => {
   }, []);
 
   return (
-    <section className="relative h-[500px] md:h-[600px] lg:h-[650px] overflow-hidden">
-      {/* Background Images - Full coverage with absolute positioning */}
-      <div className="absolute inset-0 w-full h-full">
-        {heroSlides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <Image
-              src={slide.image}
-              alt={slide.alt}
-              fill
-              className="object-cover object-center"
-              priority={index === 0}
-              sizes="100vw"
-            />
-          </div>
-        ))}
-      </div>
+    <section style={{ position: 'relative', height: '650px', overflow: 'hidden' }}>
+      {/* Background Images */}
+      {heroSlides.map((slide, index) => (
+        <div
+          key={index}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            transition: 'opacity 1s ease-in-out',
+            opacity: index === currentSlide ? 1 : 0,
+          }}
+        >
+          <Image
+            src={slide.image}
+            alt={slide.alt}
+            fill
+            style={{ objectFit: 'cover' }}
+            priority={index === 0}
+          />
+        </div>
+      ))}
 
-      {/* Content Box - Positioned on the left, overlaying the image */}
-      <div className="absolute inset-0 z-10 flex items-center">
+      {/* Content Box */}
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          display: 'flex',
+          alignItems: 'center',
+          zIndex: 10,
+        }}
+      >
         <div className="container-max px-4 w-full">
-          <div className="max-w-[90%] sm:max-w-md md:max-w-lg bg-white p-6 sm:p-8 md:p-10 lg:p-12 shadow-xl">
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-[#0F3E54] mb-3 md:mb-4">
+          <div
+            style={{
+              maxWidth: '500px',
+              backgroundColor: 'white',
+              padding: '48px',
+              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+            }}
+          >
+            <h1 style={{ fontSize: '2.25rem', fontWeight: 'bold', color: '#0F3E54', marginBottom: '16px', lineHeight: '1.2' }}>
               We don&apos;t make a living selling policies...
             </h1>
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#0F3E54] mb-4 md:mb-6">
+            <h2 style={{ fontSize: '2.25rem', fontWeight: 'bold', color: '#0F3E54', marginBottom: '24px', lineHeight: '1.2' }}>
               We earn a living protecting our clients.
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-[#718096] mb-6 md:mb-8">
+            <p style={{ fontSize: '1.125rem', color: '#718096', marginBottom: '32px' }}>
               Connect with us today and discover a better way to buy insurance. In about 8 minutes.
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-[#0F3E54] text-white px-6 sm:px-8 py-3 sm:py-4 font-semibold uppercase tracking-wider hover:bg-[#00224F] transition-colors text-sm sm:text-base"
+              style={{
+                display: 'inline-block',
+                backgroundColor: '#0F3E54',
+                color: 'white',
+                padding: '16px 32px',
+                fontWeight: '600',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+              }}
             >
               Connect
             </Link>
 
-            {/* Hexagon pattern at bottom of white box */}
-            <div className="mt-6 md:mt-8 opacity-20 hidden sm:block">
+            <div style={{ marginTop: '32px', opacity: 0.2 }}>
               <Image
                 src="/images/pattern-6.png"
                 alt=""
                 width={200}
                 height={60}
-                className="object-contain"
+                style={{ objectFit: 'contain' }}
               />
             </div>
           </div>
