@@ -18,7 +18,7 @@ const insuranceTypes = [
     id: 'commercial-auto',
     title: 'Commercial Auto',
     description: 'Whether your business owns a single vehicle or an entire fleet, we have coverage options to protect your commercial vehicles. Our commercial auto insurance addresses liability risks and helps companies maintain adequate protection as their operational needs evolve.',
-    image: '/images/car-insurance-2.png',
+    image: '/images/car-rental-and-insurance-concept-young-salesman-r-2022-02-17-20-08-59-utc-1.jpg',
   },
   {
     id: 'general-liability',
