@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0F3E54] text-white">
+    <footer className="bg-[#0A2E3F] text-white">
       <div className="container-max section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Company Info */}
           <div>
             <Image
@@ -27,31 +27,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
-              </li>
-              <li>
-                <Link href="/about-us" className="text-gray-300 hover:text-white transition-colors">About Us</Link>
-              </li>
-              <li>
-                <Link href="/personal-insurance" className="text-gray-300 hover:text-white transition-colors">Personal Insurance</Link>
-              </li>
-              <li>
-                <Link href="/commercial-insurance" className="text-gray-300 hover:text-white transition-colors">Commercial Insurance</Link>
-              </li>
-              <li>
-                <Link href="/faq" className="text-gray-300 hover:text-white transition-colors">FAQ</Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
-              </li>
-            </ul>
-          </div>
-
           {/* Insurance Services */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Insurance Services</h4>
@@ -70,6 +45,9 @@ const Footer = () => {
               </li>
               <li>
                 <Link href="/commercial-insurance#commercial-auto" className="text-gray-300 hover:text-white transition-colors">Commercial Auto</Link>
+              </li>
+              <li>
+                <Link href="/commercial-insurance#workers-comp" className="text-gray-300 hover:text-white transition-colors">Workers Compensation</Link>
               </li>
             </ul>
           </div>
