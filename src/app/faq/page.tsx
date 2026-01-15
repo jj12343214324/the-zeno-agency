@@ -59,7 +59,7 @@ export default function FAQ() {
       {/* Hero Section */}
       <section className="relative h-[40vh] min-h-[300px] flex items-center">
         <Image
-          src="/images/shutterstock_286217429-scaled.jpg"
+          src="/images/shutterstock_454824181-scaled-e1679939227910.jpg"
           alt="Frequently Asked Questions"
           fill
           className="object-cover"
@@ -83,10 +83,10 @@ export default function FAQ() {
 
             <div className="space-y-4">
               {faqItems.map((item, index) => (
-                <div key={index} className="border-l-4 border-[#4A7DFF]">
+                <div key={index} className="border-l-4 border-[#0F3E54]">
                   <button
                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                    className="w-full bg-[#4A7DFF] text-white p-4 md:p-5 flex justify-between items-center text-left font-semibold text-base md:text-lg hover:bg-[#3A6DEF] transition-colors"
+                    className="w-full bg-[#0F3E54] text-white p-4 md:p-5 flex justify-between items-center text-left font-semibold text-base md:text-lg hover:bg-[#00224F] transition-colors"
                   >
                     <span>{item.question}</span>
                     <svg
