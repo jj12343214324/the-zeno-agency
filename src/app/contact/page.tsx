@@ -14,17 +14,33 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError('');
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setFormData({ name: '', phone: '', email: '', subject: '', message: '' });
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      setSubmitted(true);
+      setFormData({ name: '', phone: '', email: '', subject: '', message: '' });
+    } catch {
+      setError('Failed to send message. Please try again or call us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -64,6 +80,12 @@ export default function Contact() {
               transition={{ duration: 0.6, ease: 'easeOut' }}
             >
               <h2 className="text-2xl md:text-3xl font-bold text-[#0F3E54] mb-6">Drop us a line</h2>
+
+              {error && (
+                <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6 text-red-700">
+                  {error}
+                </div>
+              )}
 
               {submitted ? (
                 <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
