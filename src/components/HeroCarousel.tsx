@@ -39,7 +39,7 @@ const HeroCarousel = () => {
       {/* Content Box */}
       <div className="absolute inset-0 flex items-end md:items-center z-10 pb-8 md:pb-0">
         <div className="w-full max-w-7xl mx-auto px-4">
-          <div className="max-w-full md:max-w-lg bg-white p-5 md:p-10 shadow-xl">
+          <div className="max-w-full md:max-w-lg bg-white p-5 md:p-10 shadow-xl rounded-lg">
             <h1 className="text-lg md:text-3xl font-bold text-[#0F3E54] mb-2 md:mb-3 leading-tight">
               We don&apos;t make a living selling policies...
             </h1>
