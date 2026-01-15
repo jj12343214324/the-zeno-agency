@@ -55,7 +55,7 @@ export default function Contact() {
         <div className="container-max">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div>
+            <div id="contact-form">
               <h2 className="text-2xl md:text-3xl font-bold text-[#0F3E54] mb-6">Drop us a line</h2>
 
               {submitted ? (

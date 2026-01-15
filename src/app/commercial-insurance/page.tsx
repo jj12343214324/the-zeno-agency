@@ -116,7 +116,7 @@ export default function CommercialInsurance() {
             Contact us today for a free, no-obligation consultation. Our consultations take about 8 minutes.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="inline-block bg-white text-[#0F3E54] px-8 py-4 font-semibold hover:bg-gray-100 transition-colors uppercase tracking-wider">
+            <Link href="/contact#contact-form" className="inline-block bg-white text-[#0F3E54] px-8 py-4 font-semibold hover:bg-gray-100 transition-colors uppercase tracking-wider">
               Request a Consultation
             </Link>
             <a href="tel:+16264631413" className="inline-block border-2 border-white text-white px-8 py-4 font-semibold hover:bg-white hover:text-[#0F3E54] transition-colors uppercase tracking-wider">

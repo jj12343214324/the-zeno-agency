@@ -260,7 +260,7 @@ export default function Home() {
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Request a free, no-obligation consultation. Our experienced agents are standing by to exceed your service expectations.
           </p>
-          <Link href="/contact" className="inline-block bg-white text-[#0F3E54] px-8 py-4 font-semibold text-lg hover:bg-gray-100 transition-colors uppercase tracking-wider">
+          <Link href="/contact#contact-form" className="inline-block bg-white text-[#0F3E54] px-8 py-4 font-semibold text-lg hover:bg-gray-100 transition-colors uppercase tracking-wider">
             Request a Consultation
           </Link>
         </div>

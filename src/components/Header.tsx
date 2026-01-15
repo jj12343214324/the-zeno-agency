@@ -92,7 +92,7 @@ const Header = () => {
               <Link href="/contact" className="text-[#0F3E54] hover:text-[#003478] font-medium transition-colors">
                 Contact
               </Link>
-              <Link href="/contact" className="bg-[#0F3E54] text-white px-6 py-3 font-semibold uppercase tracking-wider hover:bg-[#00224F] transition-colors">
+              <Link href="/contact#contact-form" className="bg-[#0F3E54] text-white px-6 py-3 font-semibold uppercase tracking-wider hover:bg-[#00224F] transition-colors">
                 Request a Consultation
               </Link>
             </div>
@@ -122,7 +122,7 @@ const Header = () => {
                 <Link href="/commercial-insurance" className="text-[#0F3E54] hover:text-[#003478] font-medium">Commercial Insurance</Link>
                 <Link href="/faq" className="text-[#0F3E54] hover:text-[#003478] font-medium">FAQ</Link>
                 <Link href="/contact" className="text-[#0F3E54] hover:text-[#003478] font-medium">Contact</Link>
-                <Link href="/contact" className="bg-[#0F3E54] text-white px-6 py-3 font-semibold uppercase tracking-wider text-center">
+                <Link href="/contact#contact-form" className="bg-[#0F3E54] text-white px-6 py-3 font-semibold uppercase tracking-wider text-center">
                   Request a Consultation
                 </Link>
               </div>
