@@ -17,7 +17,7 @@ export async function POST(request: Request) {
 
     // Send email to the agency
     const { error } = await resend.emails.send({
-      from: 'Zeno Agency Website <onboarding@resend.dev>',
+      from: 'Zeno Agency Website <noreply@thezenoagency.com>',
       to: ['inquiry@TheZenoAgency.com'],
       replyTo: email,
       subject: `New Contact Form: ${subject}`,
