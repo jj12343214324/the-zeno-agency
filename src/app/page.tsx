@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import HeroCarousel from '@/components/HeroCarousel';
 import WhyChooseUs from '@/components/WhyChooseUs';
+import ScrollAnimation from '@/components/ScrollAnimation';
 
 const personalInsuranceTypes = [
   {
@@ -90,7 +91,7 @@ export default function Home() {
         <div className="container-max">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Left side - Overlapping images */}
-            <div className="relative pb-20 md:pb-24">
+            <ScrollAnimation animation="slide-left" className="relative pb-20 md:pb-24">
               {/* Dot pattern behind images */}
               <div className="absolute -left-4 top-0 opacity-30 hidden md:block">
                 <Image
@@ -125,10 +126,10 @@ export default function Home() {
                   />
                 </div>
               </div>
-            </div>
+            </ScrollAnimation>
 
             {/* Right side - Text content */}
-            <div className="relative mt-8 lg:mt-0">
+            <ScrollAnimation animation="slide-right" delay={0.2} className="relative mt-8 lg:mt-0">
               {/* Dot pattern top right */}
               <div className="absolute -right-4 -top-4 opacity-30 hidden md:block">
                 <Image
@@ -152,7 +153,7 @@ export default function Home() {
               >
                 Read More
               </Link>
-            </div>
+            </ScrollAnimation>
           </div>
         </div>
       </section>
@@ -160,78 +161,80 @@ export default function Home() {
       {/* Personal Insurance Section */}
       <section className="section-padding bg-gray-50">
         <div className="container-max">
-          <div className="text-center mb-12">
+          <ScrollAnimation animation="fade-up" className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F3E54] mb-4">Personal Insurance</h2>
             <p className="text-lg text-[#718096] max-w-2xl mx-auto">
               Protect what matters most with comprehensive personal insurance coverage tailored to your needs.
             </p>
-          </div>
+          </ScrollAnimation>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {personalInsuranceTypes.map((item) => (
-              <Link
-                key={item.title}
-                href={item.href}
-                className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
-              >
-                <div className="relative h-32 md:h-40 overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                  <h3 className="absolute bottom-3 left-3 right-3 text-sm md:text-base font-semibold text-white">
-                    {item.title}
-                  </h3>
-                </div>
-              </Link>
+            {personalInsuranceTypes.map((item, index) => (
+              <ScrollAnimation key={item.title} animation="scale" delay={index * 0.05}>
+                <Link
+                  href={item.href}
+                  className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 block"
+                >
+                  <div className="relative h-32 md:h-40 overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <h3 className="absolute bottom-3 left-3 right-3 text-sm md:text-base font-semibold text-white">
+                      {item.title}
+                    </h3>
+                  </div>
+                </Link>
+              </ScrollAnimation>
             ))}
           </div>
-          <div className="text-center mt-10">
+          <ScrollAnimation animation="fade-up" delay={0.3} className="text-center mt-10">
             <Link href="/personal-insurance" className="btn-secondary">
               View All Personal Insurance
             </Link>
-          </div>
+          </ScrollAnimation>
         </div>
       </section>
 
       {/* Commercial Insurance Section */}
       <section className="section-padding bg-white">
         <div className="container-max">
-          <div className="text-center mb-12">
+          <ScrollAnimation animation="fade-up" className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F3E54] mb-4">Commercial Insurance</h2>
             <p className="text-lg text-[#718096] max-w-2xl mx-auto">
               Protect your business with comprehensive coverage designed for California businesses.
             </p>
-          </div>
+          </ScrollAnimation>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-            {commercialInsuranceTypes.map((item) => (
-              <Link
-                key={item.title}
-                href={item.href}
-                className="group bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
-              >
-                <div className="relative h-32 md:h-40 overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                  <h3 className="absolute bottom-3 left-3 right-3 text-sm md:text-base font-semibold text-white">
-                    {item.title}
-                  </h3>
-                </div>
-              </Link>
+            {commercialInsuranceTypes.map((item, index) => (
+              <ScrollAnimation key={item.title} animation="scale" delay={index * 0.05}>
+                <Link
+                  href={item.href}
+                  className="group bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 block"
+                >
+                  <div className="relative h-32 md:h-40 overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <h3 className="absolute bottom-3 left-3 right-3 text-sm md:text-base font-semibold text-white">
+                      {item.title}
+                    </h3>
+                  </div>
+                </Link>
+              </ScrollAnimation>
             ))}
           </div>
-          <div className="text-center mt-10">
+          <ScrollAnimation animation="fade-up" delay={0.3} className="text-center mt-10">
             <Link href="/commercial-insurance" className="btn-secondary">
               View All Commercial Insurance
             </Link>
-          </div>
+          </ScrollAnimation>
         </div>
       </section>
 
@@ -254,15 +257,21 @@ export default function Home() {
       {/* CTA Section */}
       <section className="section-padding bg-[#0F3E54]">
         <div className="container-max text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Get Protected?
-          </h2>
-          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Request a free, no-obligation consultation. Our experienced agents are standing by to exceed your service expectations.
-          </p>
-          <Link href="/contact#contact-form" className="inline-block bg-white text-[#0F3E54] px-8 py-4 font-semibold text-lg hover:bg-gray-100 transition-colors uppercase tracking-wider">
-            Request a Consultation
-          </Link>
+          <ScrollAnimation animation="fade-up">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Protected?
+            </h2>
+          </ScrollAnimation>
+          <ScrollAnimation animation="fade-up" delay={0.1}>
+            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              Request a free, no-obligation consultation. Our experienced agents are standing by to exceed your service expectations.
+            </p>
+          </ScrollAnimation>
+          <ScrollAnimation animation="fade-up" delay={0.2}>
+            <Link href="/contact#contact-form" className="inline-block bg-white text-[#0F3E54] px-8 py-4 font-semibold text-lg hover:bg-gray-100 transition-colors uppercase tracking-wider">
+              Request a Consultation
+            </Link>
+          </ScrollAnimation>
         </div>
       </section>
     </>

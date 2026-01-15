@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { motion } from 'motion/react';
 
 const accordionItems = [
   {
@@ -38,17 +39,28 @@ const WhyChooseUs = () => {
       <div className="container-max">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left side - Image */}
-          <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-lg">
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-50px' }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-lg"
+          >
             <Image
               src="/images/49.jpg"
               alt="Why choose us"
               fill
               className="object-cover"
             />
-          </div>
+          </motion.div>
 
           {/* Right side - Accordion */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-50px' }}
+            transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+          >
             <p className="text-[#0F3E54] font-semibold mb-2">// Why Choose us</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F3E54] mb-8 leading-tight">
               Why so many people love working with The Zeno Agency:
@@ -56,22 +68,39 @@ const WhyChooseUs = () => {
 
             <div className="space-y-4">
               {accordionItems.map((item, index) => (
-                <div key={index} className="border-l-4 border-[#0F3E54]">
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.3 + index * 0.1, ease: 'easeOut' }}
+                  className="border-l-4 border-[#0F3E54]"
+                >
                   <button
                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
                     className="w-full bg-[#0F3E54] text-white p-4 md:p-5 flex justify-between items-center text-left font-semibold text-base md:text-lg hover:bg-[#00224F] transition-colors"
                   >
                     <span>{item.title}</span>
-                    <svg
-                      className={`w-5 h-5 transition-transform ${openIndex === index ? 'rotate-180' : ''}`}
+                    <motion.svg
+                      animate={{ rotate: openIndex === index ? 180 : 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="w-5 h-5"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
+                    </motion.svg>
                   </button>
-                  {openIndex === index && (
+                  <motion.div
+                    initial={false}
+                    animate={{
+                      height: openIndex === index ? 'auto' : 0,
+                      opacity: openIndex === index ? 1 : 0,
+                    }}
+                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    className="overflow-hidden"
+                  >
                     <div className="bg-gray-50 p-4 md:p-6 space-y-4">
                       {item.content.map((paragraph, pIndex) => (
                         <p key={pIndex} className="text-[#718096]">
@@ -79,11 +108,11 @@ const WhyChooseUs = () => {
                         </p>
                       ))}
                     </div>
-                  )}
-                </div>
+                  </motion.div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
