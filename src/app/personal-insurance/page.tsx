@@ -12,13 +12,13 @@ const insuranceTypes = [
     id: 'auto',
     title: 'Auto Insurance',
     description: 'We emphasize balanced protection rather than just the lowest premiums. Not knowing what gaps might be lurking in your coverage can end up costing you far more in the long run. Let our agents help you understand your options and find the right coverage for your needs.',
-    image: '/images/car-insurance-2.png',
+    image: '/images/shutterstock_2149499793-scaled.jpg',
   },
   {
     id: 'homeowners',
     title: 'Homeowners Insurance',
     description: 'Essential protection for California homeowners. Our experienced agents help you navigate location-specific policy options and identify potential coverage gaps to ensure your most valuable investment is properly protected.',
-    image: '/images/home-2.png',
+    image: '/images/GettyImages-1270066435.jpg',
   },
   {
     id: 'life',
@@ -88,7 +88,7 @@ export default function PersonalInsurance() {
       {/* Hero Section */}
       <section className="relative h-[40vh] min-h-[300px] flex items-center">
         <Image
-          src="/images/httpselements.envato.comhappy-family-at-home-LLVD2LX.jpg"
+          src="/images/shutterstock_1102115744-scaled-e1679941725141.jpg"
           alt="Personal Insurance"
           fill
           className="object-cover"
