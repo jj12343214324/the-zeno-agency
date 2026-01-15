@@ -111,7 +111,7 @@ export default function Home() {
         <div className="container-max">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Left side - Overlapping images */}
-            <div className="relative">
+            <div className="relative pb-20 md:pb-24">
               {/* Dot pattern behind images */}
               <div className="absolute -left-4 top-0 opacity-30 hidden md:block">
                 <Image
@@ -136,13 +136,13 @@ export default function Home() {
               </div>
 
               {/* Overlapping smaller image */}
-              <div className="relative z-20 -mt-16 md:-mt-24 ml-auto mr-0 md:mr-8 w-[70%] md:w-[55%]">
-                <div className="relative h-[200px] md:h-[280px] rounded-lg overflow-hidden shadow-xl border-4 border-white">
+              <div className="absolute z-20 bottom-0 right-0 md:right-8 w-[60%] md:w-[50%]">
+                <div className="relative h-[180px] md:h-[240px] rounded-lg overflow-hidden shadow-xl border-4 border-white">
                   <Image
                     src="/images/insure8-p6pjm2gbf5lto7d29d9es608oj13xkf37733qzp78w.jpg"
                     alt="Happy client"
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
               </div>
