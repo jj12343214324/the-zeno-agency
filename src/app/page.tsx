@@ -238,6 +238,19 @@ export default function Home() {
       {/* Why Choose Us Section */}
       <WhyChooseUs />
 
+      {/* CNA Partner */}
+      <section className="py-8 bg-white">
+        <div className="container-max flex justify-center">
+          <Image
+            src="/images/cna.png"
+            alt="CNA Insurance"
+            width={150}
+            height={75}
+            className="object-contain"
+          />
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="section-padding bg-[#0F3E54]">
         <div className="container-max text-center">
@@ -250,19 +263,6 @@ export default function Home() {
           <Link href="/contact" className="inline-block bg-white text-[#0F3E54] px-8 py-4 font-semibold text-lg hover:bg-gray-100 transition-colors uppercase tracking-wider">
             Request a Consultation
           </Link>
-        </div>
-      </section>
-
-      {/* CNA Partner */}
-      <section className="py-8 bg-white">
-        <div className="container-max flex justify-center">
-          <Image
-            src="/images/cna.png"
-            alt="CNA Insurance"
-            width={150}
-            height={75}
-            className="object-contain"
-          />
         </div>
       </section>
     </>
