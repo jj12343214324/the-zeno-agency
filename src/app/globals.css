@@ -33,9 +33,10 @@ html {
 }
 
 /* Offset scroll for sticky header when using anchor links */
-/* Only apply to section anchors, not all elements with IDs */
-section[id],
-div[id] {
+/* Only apply to insurance type anchors, not all elements */
+#auto, #homeowners, #life, #motorcycle, #boat, #renters, #classic-car, #rv, #health, #disability, #long-term-care, #special-event,
+#business-owners, #commercial-auto, #general-liability, #surety-bonds, #workers-comp, #professional-liability, #workplace-benefits,
+#contact-form {
   scroll-margin-top: 120px;
 }
 
