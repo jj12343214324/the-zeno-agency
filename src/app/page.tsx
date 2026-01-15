@@ -79,28 +79,6 @@ const commercialInsuranceTypes = [
   },
 ];
 
-const insurancePartners = [
-  { name: 'Progressive', logo: '/images/progressive.png' },
-  { name: 'Travelers', logo: '/images/travelers.png' },
-  { name: 'The Hartford', logo: '/images/TH.png' },
-  { name: 'Liberty Mutual', logo: '/images/liberty.png' },
-  { name: 'Hagerty', logo: '/images/hagerty.png' },
-  { name: 'CNA', logo: '/images/cna.png' },
-  { name: 'Hiscox', logo: '/images/hiscox.png' },
-  { name: 'John Hancock', logo: '/images/jh.png' },
-  { name: 'Lincoln Financial', logo: '/images/lincoln.png' },
-  { name: 'Mutual of Omaha', logo: '/images/mo.png' },
-  { name: 'National General', logo: '/images/nationalgeneral.png' },
-  { name: 'Pacific Life', logo: '/images/pacific.png' },
-  { name: 'Bamboo', logo: '/images/bamboo.png' },
-  { name: 'Northlight', logo: '/images/northlight.png' },
-  { name: 'Protective', logo: '/images/protective.png' },
-  { name: 'Prudential', logo: '/images/prudential.png' },
-  { name: 'RLI', logo: '/images/rli.jpg' },
-  { name: 'Tapco', logo: '/images/tapco.png' },
-  { name: 'Voya', logo: '/images/voya.png' },
-];
-
 export default function Home() {
   return (
     <>
@@ -257,26 +235,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Insurance Partners */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-max">
-          <h3 className="text-center text-2xl font-bold text-[#0F3E54] mb-8">Our Insurance Partners</h3>
-          <div className="grid grid-cols-3 md:grid-cols-5 gap-6 md:gap-8 items-center">
-            {insurancePartners.map((partner) => (
-              <div
-                key={partner.name}
-                className="flex items-center justify-center p-2 md:p-4 grayscale hover:grayscale-0 transition-all duration-300"
-              >
-                <Image
-                  src={partner.logo}
-                  alt={partner.name}
-                  width={120}
-                  height={60}
-                  className="object-contain max-h-10 md:max-h-12"
-                />
-              </div>
-            ))}
-          </div>
+      {/* CNA Partner */}
+      <section className="py-8 bg-gray-50">
+        <div className="container-max flex justify-center">
+          <Image
+            src="/images/cna.png"
+            alt="CNA Insurance"
+            width={150}
+            height={75}
+            className="object-contain"
+          />
         </div>
       </section>
 
