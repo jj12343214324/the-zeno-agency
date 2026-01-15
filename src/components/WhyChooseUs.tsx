@@ -40,7 +40,7 @@ const WhyChooseUs = () => {
           {/* Left side - Image */}
           <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="/images/49.jpg"
+              src="/images/shutterstock_1734482543-scaled.jpg"
               alt="Why choose us"
               fill
               className="object-cover"
