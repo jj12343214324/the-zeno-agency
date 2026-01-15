@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import ScrollAnimation from '@/components/ScrollAnimation';
 
 export const metadata: Metadata = {
   title: 'About Us | Zeno Insurance Agency',
@@ -29,7 +30,7 @@ export default function AboutUs() {
       {/* Mission Section */}
       <section className="section-padding bg-white">
         <div className="container-max">
-          <div className="max-w-4xl mx-auto text-center">
+          <ScrollAnimation animation="fade-up" className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F3E54] mb-6">Our Mission</h2>
             <p className="text-2xl text-[#0F3E54] font-semibold mb-6">
               &ldquo;We don&apos;t make a living selling policies... We earn a living protecting our clients.&rdquo;
@@ -38,7 +39,7 @@ export default function AboutUs() {
               At Zeno Insurance Agency, we believe in providing comprehensive protection tailored to each client&apos;s unique needs.
               Our experienced agents work with top-rated insurance carriers to ensure you get the best coverage at the best price.
             </p>
-          </div>
+          </ScrollAnimation>
         </div>
       </section>
 
@@ -46,7 +47,7 @@ export default function AboutUs() {
       <section className="section-padding bg-gray-50">
         <div className="container-max">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
+            <ScrollAnimation animation="slide-left">
               <div className="relative h-[400px] lg:h-[500px] rounded-lg overflow-hidden">
                 <Image
                   src="/images/httpselements.envato.combusiness-meeting-and-teamwork-by-business-people-G4JTHB5-1.jpg"
@@ -55,8 +56,8 @@ export default function AboutUs() {
                   className="object-cover"
                 />
               </div>
-            </div>
-            <div>
+            </ScrollAnimation>
+            <ScrollAnimation animation="slide-right" delay={0.2}>
               <h2 className="text-3xl md:text-4xl font-bold text-[#0F3E54] mb-6">
                 We Are Zeno Insurance Agency
               </h2>
@@ -66,7 +67,7 @@ export default function AboutUs() {
               <p className="text-lg text-[#718096] mb-6">
                 This translates to our ability to deliver the broadest options to our clients – many times with better rates. We are proud of what we do. We are committed to helping our clients find the coverage they need at a price they can afford.
               </p>
-            </div>
+            </ScrollAnimation>
           </div>
         </div>
       </section>
@@ -74,45 +75,55 @@ export default function AboutUs() {
       {/* Values Section */}
       <section className="section-padding bg-white">
         <div className="container-max">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0F3E54] text-center mb-12">Our Values</h2>
+          <ScrollAnimation animation="fade-up">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F3E54] text-center mb-12">Our Values</h2>
+          </ScrollAnimation>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
-              <div className="w-16 h-16 bg-[#0F3E54]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-[#0F3E54]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+            <ScrollAnimation animation="fade-up" delay={0.1}>
+              <div className="bg-gray-50 p-6 rounded-lg text-center">
+                <div className="w-16 h-16 bg-[#0F3E54]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-[#0F3E54]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-[#0F3E54] mb-2">Client-First</h3>
+                <p className="text-[#718096]">We earn a living protecting our clients, not just selling policies.</p>
               </div>
-              <h3 className="text-xl font-semibold text-[#0F3E54] mb-2">Client-First</h3>
-              <p className="text-[#718096]">We earn a living protecting our clients, not just selling policies.</p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
-              <div className="w-16 h-16 bg-[#0F3E54]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-[#0F3E54]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
+            </ScrollAnimation>
+            <ScrollAnimation animation="fade-up" delay={0.2}>
+              <div className="bg-gray-50 p-6 rounded-lg text-center">
+                <div className="w-16 h-16 bg-[#0F3E54]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-[#0F3E54]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-[#0F3E54] mb-2">Expert Guidance</h3>
+                <p className="text-[#718096]">Our experienced agents help you find coverage that truly fits.</p>
               </div>
-              <h3 className="text-xl font-semibold text-[#0F3E54] mb-2">Expert Guidance</h3>
-              <p className="text-[#718096]">Our experienced agents help you find coverage that truly fits.</p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
-              <div className="w-16 h-16 bg-[#0F3E54]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-[#0F3E54]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+            </ScrollAnimation>
+            <ScrollAnimation animation="fade-up" delay={0.3}>
+              <div className="bg-gray-50 p-6 rounded-lg text-center">
+                <div className="w-16 h-16 bg-[#0F3E54]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-[#0F3E54]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-[#0F3E54] mb-2">Quick & Easy</h3>
+                <p className="text-[#718096]">Get covered in about 8 minutes with our streamlined process.</p>
               </div>
-              <h3 className="text-xl font-semibold text-[#0F3E54] mb-2">Quick & Easy</h3>
-              <p className="text-[#718096]">Get covered in about 8 minutes with our streamlined process.</p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
-              <div className="w-16 h-16 bg-[#0F3E54]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-[#0F3E54]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+            </ScrollAnimation>
+            <ScrollAnimation animation="fade-up" delay={0.4}>
+              <div className="bg-gray-50 p-6 rounded-lg text-center">
+                <div className="w-16 h-16 bg-[#0F3E54]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-[#0F3E54]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-[#0F3E54] mb-2">California Focus</h3>
+                <p className="text-[#718096]">We understand the unique insurance needs of California.</p>
               </div>
-              <h3 className="text-xl font-semibold text-[#0F3E54] mb-2">California Focus</h3>
-              <p className="text-[#718096]">We understand the unique insurance needs of California.</p>
-            </div>
+            </ScrollAnimation>
           </div>
         </div>
       </section>

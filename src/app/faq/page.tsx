@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { motion } from 'motion/react';
 
 const faqItems = [
   {
@@ -76,34 +77,58 @@ export default function FAQ() {
       <section className="section-padding bg-white">
         <div className="container-max">
           <div className="max-w-4xl mx-auto">
-            <p className="text-[#0F3E54] font-semibold mb-2">// FAQ</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F3E54] mb-8">
-              Frequently asked<br />questions
-            </h2>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+            >
+              <p className="text-[#0F3E54] font-semibold mb-2">// FAQ</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0F3E54] mb-8">
+                Frequently asked<br />questions
+              </h2>
+            </motion.div>
 
             <div className="space-y-4">
               {faqItems.map((item, index) => (
-                <div key={index} className="border-l-4 border-[#0F3E54]">
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1, ease: 'easeOut' }}
+                  className="border-l-4 border-[#0F3E54]"
+                >
                   <button
                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
                     className="w-full bg-[#0F3E54] text-white p-4 md:p-5 flex justify-between items-center text-left font-semibold text-base md:text-lg hover:bg-[#00224F] transition-colors"
                   >
                     <span>{item.question}</span>
-                    <svg
-                      className={`w-5 h-5 transition-transform ${openIndex === index ? 'rotate-180' : ''}`}
+                    <motion.svg
+                      animate={{ rotate: openIndex === index ? 180 : 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="w-5 h-5"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
+                    </motion.svg>
                   </button>
-                  {openIndex === index && (
+                  <motion.div
+                    initial={false}
+                    animate={{
+                      height: openIndex === index ? 'auto' : 0,
+                      opacity: openIndex === index ? 1 : 0,
+                    }}
+                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    className="overflow-hidden"
+                  >
                     <div className="bg-white p-4 md:p-6 border border-gray-200 border-t-0">
                       <p className="text-[#718096]">{item.answer}</p>
                     </div>
-                  )}
-                </div>
+                  </motion.div>
+                </motion.div>
               ))}
             </div>
           </div>

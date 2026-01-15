@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { motion } from 'motion/react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -55,7 +56,13 @@ export default function Contact() {
         <div className="container-max">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div id="contact-form">
+            <motion.div
+              id="contact-form"
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+            >
               <h2 className="text-2xl md:text-3xl font-bold text-[#0F3E54] mb-6">Drop us a line</h2>
 
               {submitted ? (
@@ -181,10 +188,15 @@ export default function Contact() {
                   </button>
                 </form>
               )}
-            </div>
+            </motion.div>
 
             {/* Contact Information */}
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+            >
               <h2 className="text-2xl md:text-3xl font-bold text-[#0F3E54] mb-6">Get in Touch</h2>
 
               <div className="space-y-6">
@@ -249,7 +261,7 @@ export default function Contact() {
                   Call Now
                 </a>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
