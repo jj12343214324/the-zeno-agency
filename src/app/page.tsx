@@ -139,7 +139,7 @@ export default function Home() {
               <div className="relative z-20 -mt-16 md:-mt-24 ml-auto mr-0 md:mr-8 w-[70%] md:w-[55%]">
                 <div className="relative h-[200px] md:h-[280px] rounded-lg overflow-hidden shadow-xl border-4 border-white">
                   <Image
-                    src="/images/insure8-p6pjm2gbf5lto7d29d9es608oj13xkf37733qzp78w.png"
+                    src="/images/insure8-p6pjm2gbf5lto7d29d9es608oj13xkf37733qzp78w.jpg"
                     alt="Happy client"
                     fill
                     className="object-cover"
