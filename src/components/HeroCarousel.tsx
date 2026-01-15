@@ -41,9 +41,9 @@ const HeroCarousel = () => {
       <div className="absolute inset-0 flex items-end md:items-center z-10 pb-8 md:pb-0">
         <div className="w-full max-w-7xl mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, x: -60 }}
+            initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
             className="max-w-full md:max-w-lg bg-white p-5 md:p-10 shadow-xl rounded-lg"
           >
             <motion.h1

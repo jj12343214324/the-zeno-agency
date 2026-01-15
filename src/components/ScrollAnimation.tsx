@@ -13,19 +13,19 @@ interface ScrollAnimationProps {
 
 const animations = {
   'fade-up': {
-    initial: { opacity: 0, y: 40 },
+    initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
   },
   'slide-left': {
-    initial: { opacity: 0, x: -60 },
+    initial: { opacity: 0, x: -30 },
     whileInView: { opacity: 1, x: 0 },
   },
   'slide-right': {
-    initial: { opacity: 0, x: 60 },
+    initial: { opacity: 0, x: 30 },
     whileInView: { opacity: 1, x: 0 },
   },
   'scale': {
-    initial: { opacity: 0, scale: 0.9 },
+    initial: { opacity: 0, scale: 0.95 },
     whileInView: { opacity: 1, scale: 1 },
   },
   'fade': {

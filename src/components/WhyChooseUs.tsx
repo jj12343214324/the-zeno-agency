@@ -40,10 +40,10 @@ const WhyChooseUs = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left side - Image */}
           <motion.div
-            initial={{ opacity: 0, x: -60 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
             className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-lg"
           >
             <Image
@@ -56,10 +56,10 @@ const WhyChooseUs = () => {
 
           {/* Right side - Accordion */}
           <motion.div
-            initial={{ opacity: 0, x: 60 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+            transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
           >
             <p className="text-[#0F3E54] font-semibold mb-2">// Why Choose us</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F3E54] mb-8 leading-tight">

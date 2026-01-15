@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
+import ScrollAnimation from '@/components/ScrollAnimation';
 
 export const metadata: Metadata = {
   title: 'Commercial Insurance | Zeno Insurance Agency',
@@ -83,7 +84,7 @@ export default function CommercialInsurance() {
                 id={insurance.id}
                 className={`flex flex-col lg:flex-row gap-8 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
               >
-                <div className="flex-shrink-0 w-full lg:w-1/2">
+                <ScrollAnimation animation={index % 2 === 0 ? 'slide-left' : 'slide-right'} className="flex-shrink-0 w-full lg:w-1/2">
                   <div className="relative h-[300px] rounded-lg overflow-hidden shadow-lg">
                     <Image
                       src={insurance.image}
@@ -92,14 +93,14 @@ export default function CommercialInsurance() {
                       className="object-cover"
                     />
                   </div>
-                </div>
-                <div className="flex-grow w-full lg:w-1/2">
+                </ScrollAnimation>
+                <ScrollAnimation animation={index % 2 === 0 ? 'slide-right' : 'slide-left'} delay={0.1} className="flex-grow w-full lg:w-1/2">
                   <h2 className="text-2xl md:text-3xl font-bold text-[#0F3E54] mb-4">{insurance.title}</h2>
                   <p className="text-lg text-[#718096] mb-6">{insurance.description}</p>
                   <Link href="/contact" className="btn-primary inline-block">
                     Get a Quote
                   </Link>
-                </div>
+                </ScrollAnimation>
               </div>
             ))}
           </div>
@@ -109,20 +110,22 @@ export default function CommercialInsurance() {
       {/* CTA Section */}
       <section className="section-padding bg-[#0F3E54]">
         <div className="container-max text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Protect Your Business Today
-          </h2>
-          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Contact us today for a free, no-obligation consultation. Our consultations take about 8 minutes.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact#contact-form" className="inline-block bg-white text-[#0F3E54] px-8 py-4 font-semibold hover:bg-gray-100 transition-colors uppercase tracking-wider">
-              Request a Consultation
-            </Link>
-            <a href="tel:+16264631413" className="inline-block border-2 border-white text-white px-8 py-4 font-semibold hover:bg-white hover:text-[#0F3E54] transition-colors uppercase tracking-wider">
-              Call (626) 463-1413
-            </a>
-          </div>
+          <ScrollAnimation animation="fade-up">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Protect Your Business Today
+            </h2>
+            <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+              Contact us today for a free, no-obligation consultation. Our consultations take about 8 minutes.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/contact#contact-form" className="inline-block bg-white text-[#0F3E54] px-8 py-4 font-semibold hover:bg-gray-100 transition-colors uppercase tracking-wider">
+                Request a Consultation
+              </Link>
+              <a href="tel:+16264631413" className="inline-block border-2 border-white text-white px-8 py-4 font-semibold hover:bg-white hover:text-[#0F3E54] transition-colors uppercase tracking-wider">
+                Call (626) 463-1413
+              </a>
+            </div>
+          </ScrollAnimation>
         </div>
       </section>
     </>
