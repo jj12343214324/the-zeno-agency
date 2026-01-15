@@ -34,7 +34,7 @@ html {
 
 /* Offset scroll for sticky header when using anchor links */
 [id] {
-  scroll-margin-top: 140px;
+  scroll-margin-top: 120px;
 }
 
 .btn-primary {
