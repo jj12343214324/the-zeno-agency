@@ -179,9 +179,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <WhyChooseUs />
-
       {/* Personal Insurance Section */}
       <section className="section-padding bg-gray-50">
         <div className="container-max">
@@ -282,6 +279,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
 
       {/* CTA Section */}
       <section className="section-padding bg-[#0F3E54]">
