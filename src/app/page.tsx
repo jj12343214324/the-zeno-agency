@@ -69,7 +69,7 @@ const commercialInsuranceTypes = [
   },
   {
     title: 'Workers Compensation',
-    image: '/images/mcap-blog-apr2021_6e79844.jpg',
+    image: '/images/shutterstock_1734482543-scaled.jpg',
     href: '/commercial-insurance#workers-comp',
   },
   {
