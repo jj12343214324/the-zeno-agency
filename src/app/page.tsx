@@ -5,12 +5,12 @@ import HeroCarousel from '@/components/HeroCarousel';
 const personalInsuranceTypes = [
   {
     title: 'Auto Insurance',
-    image: '/images/pexels-rodnae-productions-7821684.jpg',
+    image: '/images/shutterstock_2149499793-scaled.jpg',
     href: '/personal-insurance#auto',
   },
   {
     title: 'Homeowners Insurance',
-    image: '/images/pexels-mikhail-nilov-7734591.jpg',
+    image: '/images/GettyImages-1270066435.jpg',
     href: '/personal-insurance#homeowners',
   },
   {
@@ -20,7 +20,7 @@ const personalInsuranceTypes = [
   },
   {
     title: 'Motorcycle Insurance',
-    image: '/images/38.jpg',
+    image: '/images/iStock-922534328-scaled.jpg',
     href: '/personal-insurance#motorcycle',
   },
   {
@@ -40,7 +40,7 @@ const personalInsuranceTypes = [
   },
   {
     title: 'Renters Insurance',
-    image: '/images/httpselements.envato.comconcept-of-housing-for-family-QNX596A.jpg',
+    image: '/images/shutterstock_1865153404-scaled.jpg',
     href: '/personal-insurance#renters',
   },
 ];
