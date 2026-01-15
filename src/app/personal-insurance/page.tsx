@@ -30,7 +30,7 @@ const insuranceTypes = [
     id: 'motorcycle',
     title: 'Motorcycle Insurance',
     description: 'Coverage for street bikes, cruisers, and off-road vehicles. We offer protection for customizations and seasonal adjustments to ensure your ride is covered year-round.',
-    image: '/images/38.jpg',
+    image: '/images/iStock-922534328-scaled.jpg',
   },
   {
     id: 'boat',
