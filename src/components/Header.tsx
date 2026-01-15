@@ -55,7 +55,7 @@ const Header = () => {
         <div className="container-max py-4 px-4">
           <div className="flex justify-between items-center">
             {/* Logo */}
-            <Link href="/" className="flex items-center">
+            <Link href="/" scroll={true} onClick={() => window.scrollTo(0, 0)} className="flex items-center">
               <Image
                 src="/images/cropped-Zeno-Logo-Final.png"
                 alt="Zeno Insurance Agency"
