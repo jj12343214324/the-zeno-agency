@@ -32,6 +32,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Offset scroll for sticky header when using anchor links */
+[id] {
+  scroll-margin-top: 140px;
+}
+
 .btn-primary {
   @apply bg-[#0F3E54] text-white px-6 py-3 font-semibold hover:bg-[#00224F] transition-colors duration-300;
 }
