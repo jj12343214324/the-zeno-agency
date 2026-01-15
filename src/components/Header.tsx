@@ -3,9 +3,19 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const handleNavClick = (href: string) => {
+    setIsMenuOpen(false);
+    // If clicking on the same page (without hash), scroll to top
+    if (pathname === href || (pathname.startsWith(href) && !href.includes('#'))) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   const personalInsuranceItems = [
     { name: 'Auto Insurance', href: '/personal-insurance#auto' },
@@ -68,28 +78,28 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-8">
-              <Link href="/" className="text-[#0F3E54] hover:text-[#003478] font-medium transition-colors">
+              <Link href="/" onClick={() => handleNavClick('/')} className="text-[#0F3E54] hover:text-[#003478] font-medium transition-colors">
                 Home
               </Link>
-              <Link href="/about-us" className="text-[#0F3E54] hover:text-[#003478] font-medium transition-colors">
+              <Link href="/about-us" onClick={() => handleNavClick('/about-us')} className="text-[#0F3E54] hover:text-[#003478] font-medium transition-colors">
                 About Us
               </Link>
-              <Link href="/personal-insurance" className="text-[#0F3E54] hover:text-[#003478] font-medium transition-colors flex items-center gap-1">
+              <Link href="/personal-insurance" onClick={() => handleNavClick('/personal-insurance')} className="text-[#0F3E54] hover:text-[#003478] font-medium transition-colors flex items-center gap-1">
                 Personal Insurance
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </Link>
-              <Link href="/commercial-insurance" className="text-[#0F3E54] hover:text-[#003478] font-medium transition-colors flex items-center gap-1">
+              <Link href="/commercial-insurance" onClick={() => handleNavClick('/commercial-insurance')} className="text-[#0F3E54] hover:text-[#003478] font-medium transition-colors flex items-center gap-1">
                 Commercial Insurance
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </Link>
-              <Link href="/faq" className="text-[#0F3E54] hover:text-[#003478] font-medium transition-colors">
+              <Link href="/faq" onClick={() => handleNavClick('/faq')} className="text-[#0F3E54] hover:text-[#003478] font-medium transition-colors">
                 FAQ
               </Link>
-              <Link href="/contact" className="text-[#0F3E54] hover:text-[#003478] font-medium transition-colors">
+              <Link href="/contact" onClick={() => handleNavClick('/contact')} className="text-[#0F3E54] hover:text-[#003478] font-medium transition-colors">
                 Contact
               </Link>
               <Link href="/contact#contact-form" className="bg-[#0F3E54] text-white px-6 py-3 font-semibold uppercase tracking-wider hover:bg-[#00224F] transition-colors">
@@ -116,13 +126,13 @@ const Header = () => {
           {isMenuOpen && (
             <div className="lg:hidden mt-4 py-4 border-t border-gray-200">
               <div className="flex flex-col gap-4">
-                <Link href="/" className="text-[#0F3E54] hover:text-[#003478] font-medium">Home</Link>
-                <Link href="/about-us" className="text-[#0F3E54] hover:text-[#003478] font-medium">About Us</Link>
-                <Link href="/personal-insurance" className="text-[#0F3E54] hover:text-[#003478] font-medium">Personal Insurance</Link>
-                <Link href="/commercial-insurance" className="text-[#0F3E54] hover:text-[#003478] font-medium">Commercial Insurance</Link>
-                <Link href="/faq" className="text-[#0F3E54] hover:text-[#003478] font-medium">FAQ</Link>
-                <Link href="/contact" className="text-[#0F3E54] hover:text-[#003478] font-medium">Contact</Link>
-                <Link href="/contact#contact-form" className="bg-[#0F3E54] text-white px-6 py-3 font-semibold uppercase tracking-wider text-center">
+                <Link href="/" onClick={() => handleNavClick('/')} className="text-[#0F3E54] hover:text-[#003478] font-medium">Home</Link>
+                <Link href="/about-us" onClick={() => handleNavClick('/about-us')} className="text-[#0F3E54] hover:text-[#003478] font-medium">About Us</Link>
+                <Link href="/personal-insurance" onClick={() => handleNavClick('/personal-insurance')} className="text-[#0F3E54] hover:text-[#003478] font-medium">Personal Insurance</Link>
+                <Link href="/commercial-insurance" onClick={() => handleNavClick('/commercial-insurance')} className="text-[#0F3E54] hover:text-[#003478] font-medium">Commercial Insurance</Link>
+                <Link href="/faq" onClick={() => handleNavClick('/faq')} className="text-[#0F3E54] hover:text-[#003478] font-medium">FAQ</Link>
+                <Link href="/contact" onClick={() => handleNavClick('/contact')} className="text-[#0F3E54] hover:text-[#003478] font-medium">Contact</Link>
+                <Link href="/contact#contact-form" onClick={() => setIsMenuOpen(false)} className="bg-[#0F3E54] text-white px-6 py-3 font-semibold uppercase tracking-wider text-center">
                   Request a Consultation
                 </Link>
               </div>

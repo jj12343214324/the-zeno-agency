@@ -27,27 +27,24 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Insurance Services */}
+          {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Insurance Services</h4>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/personal-insurance#auto" className="text-gray-300 hover:text-white transition-colors">Auto Insurance</Link>
+                <Link href="/about-us" className="text-gray-300 hover:text-white transition-colors">About Us</Link>
               </li>
               <li>
-                <Link href="/personal-insurance#homeowners" className="text-gray-300 hover:text-white transition-colors">Homeowners Insurance</Link>
+                <Link href="/personal-insurance" className="text-gray-300 hover:text-white transition-colors">Personal Insurance</Link>
               </li>
               <li>
-                <Link href="/personal-insurance#life" className="text-gray-300 hover:text-white transition-colors">Life Insurance</Link>
+                <Link href="/commercial-insurance" className="text-gray-300 hover:text-white transition-colors">Commercial Insurance</Link>
               </li>
               <li>
-                <Link href="/commercial-insurance#business-owners" className="text-gray-300 hover:text-white transition-colors">Business Insurance</Link>
+                <Link href="/faq" className="text-gray-300 hover:text-white transition-colors">FAQ</Link>
               </li>
               <li>
-                <Link href="/commercial-insurance#commercial-auto" className="text-gray-300 hover:text-white transition-colors">Commercial Auto</Link>
-              </li>
-              <li>
-                <Link href="/commercial-insurance#workers-comp" className="text-gray-300 hover:text-white transition-colors">Workers Compensation</Link>
+                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
               </li>
             </ul>
           </div>
