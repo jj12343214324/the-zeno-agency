@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import HeroCarousel from '@/components/HeroCarousel';
+import WhyChooseUs from '@/components/WhyChooseUs';
 
 const personalInsuranceTypes = [
   {
@@ -177,6 +178,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
 
       {/* Personal Insurance Section */}
       <section className="section-padding bg-gray-50">
